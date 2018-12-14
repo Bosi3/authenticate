@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
 if (environment !== 'production') {
   app.use(logger('dev'));
 }
-
+//app.use('/', routes);
 app.use('/api/v1', routes(router));
 
 app.listen(`${stage.port}`, () => {
